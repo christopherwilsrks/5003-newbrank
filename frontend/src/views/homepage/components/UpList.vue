@@ -31,25 +31,25 @@
       <!-- 作品数 -->
       <el-table-column align="left" label="作品数">
         <template slot-scope="scope">
-          <span>{{scope.row.works_count}}</span>
+          <span class="up-id-figures">{{scope.row.works_count}}</span>
         </template>
       </el-table-column>
       <!-- 获赞数 -->
       <el-table-column align="center" label="获赞数">
         <template slot-scope="scope">
-          <span>{{scope.row.likes_count}}</span>
+          <span class="up-id-figures">{{scope.row.likes_count}}</span>
         </template>
       </el-table-column>
       <!-- 充电人数 -->
       <el-table-column align="center" label="充电人数">
         <template slot-scope="scope">
-          <span>{{scope.row.charges_count}}</span>
+          <span class="up-id-figures">{{scope.row.charges_count}}</span>
         </template>
       </el-table-column>
       <!-- 粉丝数 -->
       <el-table-column align="center" label="粉丝数">
         <template slot-scope="scope">
-          <span>{{scope.row.fans_count}}</span>
+          <span class="up-id-figures">{{scope.row.fans_count}}</span>
         </template>
       </el-table-column>
     </el-table>
@@ -72,7 +72,7 @@ export default {
           likes_count: '6591.04w',
           charges_count: '3.55w',
           fans_count: '1291.61w',
-          avatar_url: '//i2.hdslb.com/bfs/face/bc5ca101313d4db223c395d64779e76eb3482d60.jpg_64x64.jpg'
+          avatar_url: 'https://rks.best/newbrank-img/i2.hdslb.com/bfs/face/bc5ca101313d4db223c395d64779e76eb3482d60.jpg_64x64.jpg'
         },
         {
           name: '罗翔说刑法',
@@ -84,7 +84,7 @@ export default {
           likes_count: '2690.58w',
           charges_count: '--',
           fans_count: '931.80w',
-          avatar_url: 'http://i0.hdslb.com/bfs/face/4e5d0a51273fe3f8fabc700b6a71bb8a38c9e21e.jpg@100w_100h_100Q_1c.webp'
+          avatar_url: 'https://rks.best/newbrank-img/i0.hdslb.com/bfs/face/4e5d0a51273fe3f8fabc700b6a71bb8a38c9e21e.jpg@100w_100h_100Q_1c.webp'
         }
       ],
       listLoading: false
@@ -168,5 +168,11 @@ export default {
     text-overflow: ellipsis;
     word-break: keep-all;
   }
+}
+
+.up-id-figures {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3e4040;
 }
 </style>
