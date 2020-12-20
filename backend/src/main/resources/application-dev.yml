@@ -1,0 +1,21 @@
+#spring
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://168.63.217.228:3306/newbrank?serverTimezone=GMT%2b8:00&useSSL=false&allowPublicKeyRetrieval=true&useUnicode=true
+    username: root
+    password: qzII7%#Q5*i0IN!3
+  jackson:
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logback:
+  logDir: log/dev
+
+logging:
+  level:
+    com.fengwenyi.mybatis_plus_example.service.impl: trace
+    com.fengwenyi.mybatis_plus_example.controller: trace

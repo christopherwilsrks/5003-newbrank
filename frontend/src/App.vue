@@ -19,6 +19,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
+  background: #f8f8f8;
   line-height: 1.5;
   font-size: 15px;
   height: 100%;

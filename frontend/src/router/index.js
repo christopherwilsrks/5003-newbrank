@@ -6,7 +6,7 @@ Vue.use(Router)
 import Layout from '@/layout'
 
 export default new Router({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         {
             path: '/',
@@ -18,6 +18,50 @@ export default new Router({
                     name: 'Homepage'
                 }
             ]
+        },
+        {
+            path: '/uper/:id/',
+            component: Layout,
+            children: [
+                {
+                    path: '',
+                    redirect: 'trend',
+                    component: () => import('@/views/uper'),
+                    name: 'Uper',
+                    children: [
+                        {
+                            path: 'trend',
+                            component: () => import('@/views/uper/components/TrendAnalyze'),
+                            // name: 'TrendAnalyze'
+                        },
+                        {
+                            path: 'work',
+                            component: () => import('@/views/uper/components/WorkAnalyze'),
+                            // name: 'WorkAnalyze'
+                        },
+                        {
+                            path: 'fan',
+                            component: () => import('@/views/uper/components/FanAnalyze'),
+                            // name: 'FanAnalyze'
+                        },
+                        {
+                            path: 'word',
+                            component: () => import('@/views/uper/components/WordAnalyze')
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            path: '/relation',
+            component: Layout,
+            children: [
+                {
+                    path: ':tag',
+                    component: () => import('@/views/relation'),
+                    name: 'RelationChart',
+                }
+            ],
         }
     ]
 })
